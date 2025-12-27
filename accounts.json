@@ -12,9 +12,10 @@
       "AgACAgIAAxkBAAIFaWj7sc1Ja_mlmYf9hUcImiIcdbrDAAKJ-jEbufnYS7EMkL0KbEjDAQADAgADeQADNgQ"
     ],
     "description": {
-      "ru": "Прокаченный аккаунт, 12150 кубков, полная пе-репривязка, бесплатная смена имени. \n💰 Цена: 90 USDT (эквивалент рублями по текущему курсу) 💸",
-      "en": "Enhanced account, 12150 trophies, full transfer, free name change.\n💰 Price: 90 USDT (equivalent in RUB) 💸"
+      "ru": "Прокаченный аккаунт, 12150 кубков, полная перепривязка, бесплатная смена имени.",
+      "en": "Enhanced account, 12150 trophies, full transfer, free name change."
     },
+    "price_usdt": 90,
     "author": "https://t.me/ghost1kki"
   },
   "2": {
@@ -28,9 +29,10 @@
       "AgACAgIAAxkBAAIKN2k5ck0ak-UtTX0iy2CtFuvpjHL0AAIZDGsbbAPRSaXNzV9S3zbcAQADAgADeAADNgQ"
     ],
     "description": {
-      "ru": "Bronze 1.\nСет скинов с БП EP9 ACT1, много брелков и граффити.\nПолная пе-репривязка на вас, отдаю все чеки покупок.\n💰 Цена: 5.99 USDT (эквивалент рублями по текущему курсу) 💸",
-      "en": "Silver 1.\nSkin set from BP EP9 ACT1, many keychains and graffiti.\nFull transfer to you, all receipts included.\n💰 Price: 5.99 USDT (equivalent in RUB) 💸"
+      "ru": "Bronze 1.\nСет скинов с БП EP9 ACT1, много брелков и граффити.\nПолная перепривязка на вас, отдаю все чеки покупок.",
+      "en": "Silver 1.\nSkin set from BP EP9 ACT1, many keychains and graffiti.\nFull transfer to you, all receipts included."
     },
+    "price_usdt": 5.99,
     "author": "https://t.me/balenciaga_telegram"
   },
   "3": {
@@ -48,6 +50,7 @@
       "ru": "Fortnite скины, множество игр из которых: Farming Simulator 2022, Bus Simulator 2021\n Dragon Age Inquisition Game Of The Year Edition, Sid Meier's Civilization VI\n Dead Islands 2, Kingdom Come Deliverance I, Doki Doki +",
       "en": "There is a small locker in Fortnite (screenshots below), from the games Farming Simulator 2022, Bus Simulator 2021\n Dragon Age Inquisition Game Of The Year Edition, Sid Meier's Civilization VI\n Dead Islands 2, Kingdom Come Deliverance I, Doki Doki +"
     },
+    "price_usdt": 9.68,
     "author": "https://t.me/balenciaga_telegram"
   }
 }

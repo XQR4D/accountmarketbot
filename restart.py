@@ -13,37 +13,33 @@ def terminal_input():
         try:
             cmd = input().strip().lower()
             if cmd == "restart":
-                print("\n[!] Получена команда из консоли. Перезапуск...")
+                print("\n[!] Команда restart из консоли. Перезапуск...")
                 RESTART_FLAG = True
         except EOFError:
             break
 
-# Запускаем поток чтения консоли
 threading.Thread(target=terminal_input, daemon=True).start()
 
 while True:
     RESTART_FLAG = False
-    try:
-        print(f"[{time.strftime('%H:%M:%S')}] Запуск бота...")
-        
-        # Запускаем процесс бота
-        # Используем sys.executable для запуска через тот же интерпретатор Python
-        process = subprocess.Popen([sys.executable, BOT_SCRIPT])
-        
-        while True:
-            # Проверка 1: Бот завершился сам (os._exit из чата)
-            if process.poll() is not None:
-                print(f"[{time.strftime('%H:%M:%S')}] Бот завершил работу самостоятельно. Перезапуск...")
-                break
-                
-            # Проверка 2: Команда 'restart' введена в консоль
-            if RESTART_FLAG:
-                process.terminate() # Мягко завершаем
-                process.wait()      # Ждем выхода
-                break
-            
-            time.sleep(1) # Не нагружаем процессор
-            
-    except Exception as e:
-        print(f"Ошибка монитора: {e}. Рестарт через 5 секунд...")
-        time.sleep(5)
+    print(f"[{time.strftime('%H:%M:%S')}] Запуск бота...")
+
+    process = subprocess.Popen([sys.executable, BOT_SCRIPT])
+
+    while True:
+        if RESTART_FLAG:
+            print("Перезапуск по команде из консоли...")
+            process.terminate()
+            try:
+                process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                process.kill()
+            break
+
+        if process.poll() is not None:
+            exit_code = process.returncode
+            print(f"[{time.strftime('%H:%M:%S')}] Бот завершился с кодом {exit_code}. Перезапуск через 3 секунды...")
+            time.sleep(3)
+            break
+
+        time.sleep(0.5)
