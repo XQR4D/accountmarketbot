@@ -116,7 +116,7 @@ TEXTS = {
     "contact_seller": {"ru": "👨‍💻 Связаться", "en": "👨‍💻 Contact"},
     "usernames": {"ru": "💎 Юзернеймы", "en": "💎 Usernames"},
     "wardrobe": {"ru": "💼 Заказ скинов", "en": "💼 Order skins"},
-    "buy_username": {"ru": "🛍 Купить юзернейм", "en": "🛍 Buy a username"},
+    "tg_username": {"ru": "👱 Доступные юзернеймы", "en": "👱 Available usernames"},
 }
 
 if config["newyear"]:
@@ -161,20 +161,19 @@ def tg_username(lang):
     for uname, base_price in USERNAME_ITEMS:
         label = f"💎 {uname}"
         keyboard.append([InlineKeyboardButton(label, callback_data=f"uname_{uname[1:]}")])
-    keyboard.append([InlineKeyboardButton(TEXTS["buy_username"][lang], url="https://t.me/vs_xrd")])
     keyboard.append([InlineKeyboardButton(TEXTS["back"][lang], callback_data="back")])
     return InlineKeyboardMarkup(keyboard)
 
 def csdota_wardrobe(lang):
     keyboard = [
-        [InlineKeyboardButton("🎮 Counter-Strike 2 — Заказать скин", callback_data="order_cs2")],
-        [InlineKeyboardButton("🎮 Dota 2 — Заказать скин", callback_data="order_dota2")],
+        [InlineKeyboardButton("🎯 Counter-Strike 2", callback_data="order_cs2")],
+        [InlineKeyboardButton("🦸 Dota 2", callback_data="order_dota2")],
         [InlineKeyboardButton(TEXTS["back"][lang], callback_data="back")]
     ]
     return InlineKeyboardMarkup(keyboard)
 
 def account_buttons(lang, author_link=None):
-    keyboard = [[InlineKeyboardButton(TEXTS["contact_seller"][lang], url=author_link or "https://t.me/vs_xrd")]]
+    keyboard = [[InlineKeyboardButton(TEXTS["contact_seller"][lang], url=author_link or "https://t.me/balenciaga_telegram")]]
     keyboard.append([InlineKeyboardButton(TEXTS["back"][lang], callback_data="back")])
     return InlineKeyboardMarkup(keyboard)
 
@@ -429,7 +428,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             except:
                 pass
             await context.bot.send_message(query.message.chat_id, text, reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("Купить", url="https://t.me/vs_xrd")],
+                [InlineKeyboardButton("Купить", url="https://t.me/balenciaga_telegram")],
                 [InlineKeyboardButton(TEXTS["back"][lang], callback_data="back")]
             ]))
         return

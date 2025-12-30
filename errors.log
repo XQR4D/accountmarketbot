@@ -1,0 +1,22 @@
+2025-12-30 23:51:56,960 No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\penan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\telegram\ext\_application.py", line 1335, in process_update
+    await coroutine
+  File "C:\Users\penan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\telegram\ext\_handlers\basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\penan\Documents\GitHub\accountmarketbot\handlers\wardrobe.py", line 11, in button_handler
+    lang = context.user_data.get("lang", user_languages.get(user_id, "ru"))
+                                         ^^^^^^^^^^^^^^
+NameError: name 'user_languages' is not defined
+2025-12-30 23:59:02,999 No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\penan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\telegram\ext\_application.py", line 1335, in process_update
+    await coroutine
+  File "C:\Users\penan\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\telegram\ext\_handlers\basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\penan\Documents\GitHub\accountmarketbot\handlers\admin.py", line 36, in admin_panel_handler
+    user_states[update.effective_user.id] = "set_balance"
+    ^^^^^^^^^^^
+NameError: name 'user_states' is not defined

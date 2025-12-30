@@ -33,5 +33,17 @@
     },
     "price_usdt": 9.68,
     "author": "https://t.me/balenciaga_telegram"
+  },
+  "3": {
+    "title": "Lunar Snake (Telegram Gift)",
+    "photos": [
+      "AgACAgIAAxkBAAIRe2lRWkIwZDheC-b_LyIjBtpa5OYrAAJTEWsbI_GIStPL71ZCi2MsAQADAgADeAADNgQ"
+    ],
+    "description": {
+      "ru": "Продажа через TonnelMarket.\nОтправка напрямую с вашей комиссией.",
+      "en": "Sell from TonnelMarket.\nSend as gift only your prepay."
+    },
+    "price_usdt": 8.9,
+    "author": "https://t.me/balenciaga_telegram"
   }
 }
