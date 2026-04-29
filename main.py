@@ -75,7 +75,7 @@ if not config:
     }
     save_json(CONFIG_FILE, config)
 
-RUB_RATE = 79
+RUB_RATE = 74
 
 subscribers = set(load_json(SUBSCRIBERS_FILE))
 pending_accounts = load_json(PENDING_FILE)
@@ -87,12 +87,10 @@ user_states = {}
 user_drafts = {}
 
 USERNAME_ITEMS = [
-    ("@pepecollectors", 232),
-    ("@DateHappy", 7.76),
-    ("@seIIer_accounts", 3.10),
-    ("@messengervolt", 38.8),
-    ("@voltmessenger", 38.8),
-    ("@vs_xrd", 7.76),
+    ("@pepecollectors", 200),
+    ("@DateHappy", 15),
+    ("@noggano444", 15),
+    ("@mokrivskiylox", 50),
 ]
 
 TEXTS = {
